@@ -1,0 +1,458 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 1% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.header.hidden {
+    top: -90px;
+  }
+
+  .logo img{
+    max-width: 14vh;
+}
+
+.logo2 img{
+    max-width: 20vh;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 19px;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.247);
+    border-radius: 4px;
+}
+
+.header .navigation ul li ul li a{
+    font-size: 19px;
+    text-transform:none;
+}
+
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100%;
+    border-bottom: #000000 1px dotted;
+}
+
+.header .navigation ul li:hover > ul{
+    display: initial;
+}
+
+.sub-menu {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border-radius: 4px;
+    left: 0%; /* Cambiado de 0 a 100% */
+    display: none;
+    box-shadow: inset
+    0 0  0 2px rgb(255,255,255),
+    0 .5rem 1rem rgba(0, 0, 0, 0.267);
+  }
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 25px;
+    height: 25px;
+}
+
+/*Banner*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(90vh - 0px);
+    /*block-size: cover;*/
+    background-position: center;
+    transition: all .1s ease-in-out;
+    animation: banner 16s infinite linear;
+}
+
+.banner_content {
+    margin-top: 5em;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: rgba(71, 14, 14, 0.164);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner_content p {
+    margin: 0 7em;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.banner_content a {
+    font-size: 3em;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+}
+
+.banner_content a:hover {
+    transform: scale(1.4);
+    color: #000000;
+}
+
+.banner_content p a {
+    font-size: 3vh;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+}
+
+.banner_content p a:hover {
+    color: #000000;
+}
+
+@keyframes banner {
+    0% {
+        background-image: url(../img/tatuaje-1.jpg);
+    }
+
+    25% {
+        background-image: url(../img/tatuaje-1.jpg);
+    }
+
+    26% {
+        background-image: url(../img/tatuaje-2.jpg);
+    }
+
+    50% {
+        background-image: url(../img/tatuaje-3.jpg);
+    }
+
+    51% {
+        background-image: url(../img/tatuaje-4.jpg);
+    }
+
+    75% {
+        background-image: url(../img/tatuaje-5.jpg);
+    }
+
+    76% {
+        background-image: url(../img/tatuaje-6.jpg);
+    }
+
+    100% {
+        background-image: url(../img/tatuaje-8.jpg);
+    }
+}
+
+/*Animación inicio*/
+
+.animacioninicio {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.75;
+    background: linear-gradient(157deg, #ffffff 47.9%, #000000 63.45%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+   -webkit-animation: MY_GRADIENT_ANIMATION 10s infinite;
+    -moz-animation: MY_GRADIENT_ANIMATION 10s infinite;
+    -o-animation: MY_GRADIENT_ANIMATION 10s infinite;
+    animation: MY_GRADIENT_ANIMATION 10s infinite;
+    
+  }
+  
+  @-webkit-keyframes MY_GRADIENT_ANIMATION {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes MY_GRADIENT_ANIMATION {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-o-keyframes MY_GRADIENT_ANIMATION {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes MY_GRADIENT_ANIMATION {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+
+  /*Separador*/
+
+.separador {
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+  /*Quién eres*/
+
+.section-servicios .titulo-servicios {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin: 0 3em 0;
+    background: #000000;
+}
+
+.section-servicios .contenedor-servicios {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    margin: 0 30vh;
+}
+
+/*Jumbotron*/
+
+jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*Contacto*/
+
+.section-contacto .contenedor-contacto {
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.section-contacto .contenedor-contacto form {
+    height: 100%;
+    width: 100%;
+    flex: 1 1 40rem;
+    padding: 4rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.section-contacto .contenedor-contacto form .caja {
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.section-contacto .contenedor-contacto form .caja:focus {
+    border-color: #000000;
+}
+
+.section-contacto .contenedor-contacto form .sexo {
+    color: rgba(51, 51, 51, 0.685);
+}
+
+.section-contacto .contenedor-contacto form .sexo #sextext {
+    font-weight: bold;
+}
+
+.section-contacto .contenedor-contacto form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.section-contacto .contacto {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 2em 3em;
+    background: #000000;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.boton:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 1px #000000 solid;
+}
+
+.lista-contenido-obras .lista-info-obras{
+    margin: 0 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boton-obras{
+    display: inline-block;
+    border-radius: 5rem;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.boton-obras:hover{
+    background: #ffffff;
+    color: #000000;
+    border: 1px #000000 solid;
+}
+.boton-servicios{
+    display: inline-block;
+    border-radius: 5rem;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.boton-servicios:hover{
+    background: #ffffff;
+    color: #000000;
+    border: 1px #000000 solid;
+}
+
+/*Pie de página*/
+
+.section-footer{
+    margin:0 9%;
+  }
+  
+  .section-footer .contenedor-footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+  }
+  
+  .section-footer .contenedor-footer .caja{
+    flex: 1 5rem;
+  }
+  
+  .section-footer .contenedor-footer .caja h3{
+    color: #000000;
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+  
+  .section-footer .contenedor-footer .caja a{
+    color: #000000;
+    font-size: 1rem;
+    padding: 1rem 0;
+    display: block;
+  }
+  
+  .section-footer .contenedor-footer .caja a:hover{
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .caja img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: text-top;
+  }
+  
+  .section-footer .creditos{
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: black;
+    border-top: .1rem solid rgba(0,0,0,.1);
+  }
+  
+
+

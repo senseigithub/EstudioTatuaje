@@ -1,0 +1,239 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 1% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.header.hidden {
+    top: -90px;
+  }
+
+  .logo img{
+    max-width: 14vh;
+}
+
+.logo2 img{
+    max-width: 20vh;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 19px;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.247);
+    border-radius: 4px;
+}
+
+.header .navigation ul li ul li a{
+    font-size: 19px;
+    text-transform:none;
+}
+
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100%;
+    border-bottom: #000000 1px dotted;
+}
+
+.header .navigation ul li:hover > ul{
+    display: initial;
+}
+
+.sub-menu {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border-radius: 4px;
+    left: 0%; /* Cambiado de 0 a 100% */
+    display: none;
+    box-shadow: inset
+    0 0  0 2px rgb(255,255,255),
+    0 .5rem 1rem rgba(0, 0, 0, 0.267);
+  }
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 25px;
+    height: 25px;
+}
+
+/*Separador*/
+
+.separador {
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-servicios .titulo-servicios {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin: 0 3em 0;
+    background: #000000;
+}
+
+.section-servicios .contenedor-servicios {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    margin: 0 30vh;
+}
+
+/*Momumentos*/
+
+.section-monumentos .titulo-monumentos {
+    font-size: 25px;
+    margin: 3rem 3rem 3rem;
+  }
+  
+  .section-monumentos .titulo-monumentos {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin: 0 3em 0;
+    background: #000000;
+  }
+  
+/* Galeria de monumentos */
+
+.boton-monumentos{
+    display: inline-block;
+    position: relative;
+    left: 660px;
+    border-radius: 5rem;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: .9rem 3.5rem;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .boton-monumentos:hover{
+    background: #ffffff;
+    color: black;
+    border: 1px #655F61 solid;
+  }
+  
+  .titulo-2monumentos {
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .portafolio {
+    background: #ffffff;
+  }
+  
+  .galeria-port {
+    display: flex;
+    justify-content: space-evenly;
+    /*pasar a la siguiente fila (o columna, dependiendo de la dirección principal) si no hay suficiente espacio en la fila o columna actual.*/
+    flex-wrap: wrap;
+  }
+  
+  .imagen-port {
+    width: 24%;
+    margin-bottom: 10px;
+    /*todo lo que salga del contenedor se oculta*/
+    overflow: hidden; 
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  }
+  
+  .imagen-port > img {
+    width: 100%;
+    height: 100%;
+    /*cover: El contenido se ajusta dentro del contenedor manteniendo su proporción original*/
+    object-fit: cover;
+    display: block;
+  }
+  
+  .hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(0, 2%, 9%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .hover-galeria img {
+    width: 50px;
+  }
+  
+  .hover-galeria p {
+    text-align: center;
+    color: #fff;
+    font-size:medium;
+  }
+  
+  .imagen-port:hover .hover-galeria {
+    transform: scale(1);
+  }
+  
+  .gallery {
+    background: #f2f2f2;
+  }
+  
+  .contenedor-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  
+  .img-galeria {
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    cursor: pointer;
+  }
